@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-<rect data-fill-style="placeholder" fill="transparent" height="16" width="16" y="4" x="4"></rect>
-<path data-stroke-style="placeholder" stroke-width="2" stroke="black" d="M3 3H21V21H3V3Z" clip-rule="evenodd" fill-rule="evenodd"></path>
+<svg role="presentation" svg-compile="<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;>
+    <path fill=&quot;none&quot; fill-rule=&quot;evenodd&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; d=&quot;M3 3h18v18H3z&quot;/>
+</svg>
+" viewBox="0 0 24 24">
+    <path xmlns="http://www.w3.org/2000/svg" d="M3 3h18v18H3z" stroke-width="2" stroke="currentColor" fill-rule="evenodd" fill="none"></path>
 </svg>

@@ -9,30 +9,39 @@ import { ReactComponent as StarIcon } from "@icon/star.svg";
 
 interface IShapePanel {
   icon: React.ReactElement;
+  type: string;
 }
 export const SHAPE_PANEL: IShapePanel[] = [
   {
     icon: <RetangleIcon />,
+    type: "rectangle",
   },
   {
     icon: <RoundedRetangleIcon />,
+    type: "rounded rectangle",
   },
   {
     icon: <CircleIcon />,
+    type: "circle",
   },
   {
     icon: <TriangleIcon />,
+    type: "triangle",
   },
   {
     icon: <RhombusIcon />,
+    type: "rhombus",
   },
   {
     icon: <BubbleIcon />,
+    type: "bubble",
   },
   {
     icon: <ParallelogramIcon />,
+    type: "parallelogram",
   },
   {
     icon: <StarIcon />,
+    type: "star",
   },
 ];

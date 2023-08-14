@@ -1,15 +1,17 @@
-import { Popover, UnstyledButton } from "@mantine/core";
+import { Menu, Popover, UnstyledButton } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { v4 as uuidv4 } from "uuid";
 
 import { useNode } from "@store/node.store";
 import { ReactComponent as ShapeIcon } from "@icon/shape.svg";
 import { SHAPE_PANEL } from "./constant";
+import { useState } from "react";
 
 const CreateShapeToolbar = () => {
-  const [opened, { close, open }] = useDisclosure(false);
+  const [open, setOpen] = useState<boolean>(false);
   const { addNode } = useNode();
   const handleAddNode = () => {
+    setOpen(false);
     addNode({
       id: uuidv4(),
       type: "rectangle",
@@ -22,32 +24,35 @@ const CreateShapeToolbar = () => {
     });
   };
   return (
-    <Popover
-      width={150}
-      offset={20}
-      position="right-start"
+    <Menu
       shadow="md"
-      opened={opened}
+      offset={15}
+      position="right-start"
+      opened={open}
+      onChange={setOpen}
+      radius={4}
+      closeOnClickOutside
     >
-      <Popover.Target>
-        <UnstyledButton
-          className="w-6 h-6"
-          onMouseEnter={open}
-          onMouseLeave={close}
-        >
+      <Menu.Target>
+        <UnstyledButton className="w-11 h-11 p-1.5">
           <ShapeIcon />
         </UnstyledButton>
-      </Popover.Target>
-      <Popover.Dropdown sx={{ pointerEvents: "none" }}>
-        <div className="grid grid-cols-3 gap-2">
+      </Menu.Target>
+
+      <Menu.Dropdown>
+        <div className="p-4 grid grid-cols-3 place-items-center">
           {SHAPE_PANEL.map((item, index) => (
-            <UnstyledButton key={index} className="w-6 h-6 hover:bg-slate-200">
+            <UnstyledButton
+              key={index}
+              className="w-10 h-10 rounded-md hover:bg-slate-200 px-1.5 py-0.5 !text-[#050038] hover:!text-blue-700"
+              onClick={handleAddNode}
+            >
               {item.icon}
             </UnstyledButton>
           ))}
         </div>
-      </Popover.Dropdown>
-    </Popover>
+      </Menu.Dropdown>
+    </Menu>
   );
 };
 
