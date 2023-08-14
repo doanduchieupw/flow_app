@@ -1,0 +1,6 @@
+<svg role="presentation" svg-compile="<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;>
+    <path fill=&quot;currentColor&quot; fill-rule=&quot;nonzero&quot; d=&quot;M12 2.617L2.617 12 12 21.383 21.383 12 12 2.617zm.707-2.121l10.797 10.797a1 1 0 0 1 0 1.414L12.707 23.504a1 1 0 0 1-1.414 0L.496 12.707a1 1 0 0 1 0-1.414L11.293.496a1 1 0 0 1 1.414 0z&quot;/>
+</svg>
+" viewBox="0 0 24 24">
+    <path xmlns="http://www.w3.org/2000/svg" d="M12 2.617L2.617 12 12 21.383 21.383 12 12 2.617zm.707-2.121l10.797 10.797a1 1 0 0 1 0 1.414L12.707 23.504a1 1 0 0 1-1.414 0L.496 12.707a1 1 0 0 1 0-1.414L11.293.496a1 1 0 0 1 1.414 0z" fill-rule="nonzero" fill="currentColor"></path>
+</svg>

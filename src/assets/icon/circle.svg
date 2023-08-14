@@ -1,0 +1,6 @@
+<svg role="presentation" svg-compile="<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;>
+    <circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;9&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;/>
+</svg>
+" viewBox="0 0 24 24">
+    <circle xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke="currentColor" fill-rule="evenodd" fill="none" r="9" cy="12" cx="12"></circle>
+</svg>
