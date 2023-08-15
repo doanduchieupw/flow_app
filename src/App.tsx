@@ -1,9 +1,14 @@
-import { Playground, Toolbar } from "./components";
+import { ReactFlowProvider } from "reactflow";
+import { Draw, Editor, Playground } from "./components";
 
 function App() {
   return (
     <div className="h-screen w-screen relative">
-      <Playground />
+      <ReactFlowProvider>
+        <Draw>
+          <Playground />
+        </Draw>
+      </ReactFlowProvider>
     </div>
   );
 }

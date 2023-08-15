@@ -6,6 +6,7 @@ import { ReactComponent as RhombusIcon } from "@icon/rhombus.svg";
 import { ReactComponent as BubbleIcon } from "@icon/bubble.svg";
 import { ReactComponent as ParallelogramIcon } from "@icon/parallelogram.svg";
 import { ReactComponent as StarIcon } from "@icon/star.svg";
+import RectangleShape from "./rectangle";
 
 interface IShapePanel {
   icon: React.ReactElement;
@@ -45,3 +46,7 @@ export const SHAPE_PANEL: IShapePanel[] = [
     type: "star",
   },
 ];
+
+export const nodeTypes = {
+  rectangle: RectangleShape,
+};

@@ -1,27 +1,16 @@
-import { Menu, Popover, UnstyledButton } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
-import { v4 as uuidv4 } from "uuid";
+import { useState } from "react";
+import { Menu, UnstyledButton } from "@mantine/core";
 
-import { useNode } from "@store/node.store";
 import { ReactComponent as ShapeIcon } from "@icon/shape.svg";
 import { SHAPE_PANEL } from "./constant";
-import { useState } from "react";
+import { usePreviewShape } from "@src/store";
 
 const CreateShapeToolbar = () => {
   const [open, setOpen] = useState<boolean>(false);
-  const { addNode } = useNode();
-  const handleAddNode = () => {
+  const { setPreview } = usePreviewShape();
+  const handleBeforeAddNode = () => {
     setOpen(false);
-    addNode({
-      id: uuidv4(),
-      type: "rectangle",
-      position: {
-        x: Math.random() * 608,
-        y: Math.random() * 976,
-      },
-      data: { label: "node rectangle" },
-      style: { border: "1px solid #009e8b", padding: 10 },
-    });
+    setPreview({ zIndex: -1, cursor: "crosshair" });
   };
   return (
     <Menu
@@ -45,7 +34,7 @@ const CreateShapeToolbar = () => {
             <UnstyledButton
               key={index}
               className="w-10 h-10 rounded-md hover:bg-slate-200 px-1.5 py-0.5 !text-[#050038] hover:!text-blue-700"
-              onClick={handleAddNode}
+              onClick={handleBeforeAddNode}
             >
               {item.icon}
             </UnstyledButton>

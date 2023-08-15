@@ -1,9 +1,9 @@
 import ReactFlow, { Controls, Background, Panel } from "reactflow";
 import "reactflow/dist/style.css";
 
-// import { useNode } from "";
-import { Toolbar } from "@src/components";
+import { Toolbar, ViewportTracker } from "@src/components";
 import { useNode } from "@store/node.store";
+import { nodeTypes } from "../toolbar/shape/constant";
 
 const Playground = () => {
   const { edges, nodes, onConnect, onEdgesChange, onNodesChange } = useNode();
@@ -15,6 +15,7 @@ const Playground = () => {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        nodeTypes={nodeTypes}
         fitView
       >
         <Background />
@@ -22,6 +23,7 @@ const Playground = () => {
         <Panel position="top-left">
           <Toolbar />
         </Panel>
+        <ViewportTracker />
       </ReactFlow>
     </div>
   );
