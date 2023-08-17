@@ -1,5 +1,5 @@
 import { ReactFlowProvider } from "reactflow";
-import { Draw, Editor, Playground } from "./components";
+import { Draw, Playground } from "./components";
 
 function App() {
   return (

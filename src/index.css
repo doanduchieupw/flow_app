@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #7dd3fc;
+  --blue-400: #38bdf8;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+}
+
 .ProseMirror {
   height: 100%;
   padding: 4px !important;
@@ -10,4 +22,35 @@
 [id^="tippy-"] {
   inset: 0 !important;
   transform: translate(0, -50px) !important;
+}
+
+/* CUSTOM HANDLE */
+.react-flow .react-flow__handle {
+  background-color: var(--blue-300);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  transition-duration: 250ms;
+}
+
+.react-flow .react-flow__handle:hover {
+  width: 6px;
+  height: 6px;
+  cursor: default;
+}
+
+.react-flow .react-flow__handle-top {
+  top: -10px;
+}
+
+.react-flow .react-flow__handle-bottom {
+  bottom: -10px;
+}
+
+.react-flow .react-flow__handle-right {
+  right: -10px;
+}
+
+.react-flow .react-flow__handle-left {
+  left: -10px;
 }

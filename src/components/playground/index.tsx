@@ -1,4 +1,9 @@
-import ReactFlow, { Controls, Background, Panel } from "reactflow";
+import ReactFlow, {
+  Controls,
+  Background,
+  Panel,
+  ConnectionMode,
+} from "reactflow";
 import "reactflow/dist/style.css";
 
 import { Toolbar, ViewportTracker } from "@src/components";
@@ -16,6 +21,7 @@ const Playground = () => {
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
         nodeTypes={nodeTypes}
+        connectionMode={ConnectionMode.Loose}
         fitView
       >
         <Background />

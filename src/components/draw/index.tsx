@@ -62,7 +62,7 @@ const Draw: React.FC<IDraw> = ({ children }: IDraw) => {
       },
       data: { label: "node rectangle" },
       style: {
-        border: "1px solid #009e8b",
+        border: "2px solid #000",
         width: shape.width / zoom,
         height: shape.height / zoom,
       },
